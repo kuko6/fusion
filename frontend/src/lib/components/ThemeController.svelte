@@ -1,9 +1,9 @@
 <script lang="ts">
-	let isDark = $state(localStorage.getItem('theme')?.includes('dark'));
+	let isDark = $state(sessionStorage.getItem('theme')?.includes('dark'));
 
 	$effect(() => {
 		const theme = isDark ? 'dark' : 'light';
-		localStorage.setItem('theme', theme);
+		sessionStorage.setItem('theme', theme);
 	});
 </script>
 
