@@ -51,8 +51,9 @@
 	href={'/items/' + goto}
 	use:shortcut={action === 'previous' ? shortcuts.prevItem.keys : shortcuts.nextItem.keys}
 	class="btn lg:btn-ghost btn-circle lg:btn-xl fixed bottom-6
-	    {action === 'previous' ? 'left-4' : 'right-4'} lg:sticky lg:top-[50%]
-		{hasOtherItems && hasValidTarget && visible ? 'visible' : 'invisible'} lg:visible"
+			{action === 'previous' ? 'left-4' : 'right-4'} lg:sticky lg:top-[50%]
+			{hasOtherItems && hasValidTarget && visible ? 'visible' : 'invisible'}
+			lg:{hasOtherItems && hasValidTarget ? 'visible' : 'invisible'}"
 >
 	{#if action === 'previous'}
 		<ChevronLeft />
