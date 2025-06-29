@@ -31,7 +31,7 @@
 </svelte:head>
 
 <div class="flex flex-col">
-	<PageNavHeader title={t('common.settings')}></PageNavHeader>
+	<PageNavHeader></PageNavHeader>
 	<div class="px-4 lg:px-8">
 		<div class="py-6">
 			<h1 class="text-3xl font-bold">{t('common.settings')}</h1>

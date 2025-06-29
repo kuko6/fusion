@@ -27,7 +27,7 @@
 </svelte:head>
 
 <div class="flex flex-col">
-	<PageNavHeader title={t('common.search')}></PageNavHeader>
+	<PageNavHeader></PageNavHeader>
 	<div class="px-4 lg:px-8">
 		<div class="py-6">
 			<h1 class="text-3xl font-bold">{t('common.search')}: {filterForm.keyword}</h1>

@@ -27,7 +27,7 @@
 	<div class="drawer-side z-10">
 		<label for="sidebar-toggle" aria-label="close sidebar" class="drawer-overlay"></label>
 		<div
-			class="text-base-content bg-base-200 z-50 h-full min-h-full w-[80%] overflow-x-hidden px-2 py-4 lg:w-72"
+			class="text-base-content bg-base-200 z-50 h-full min-h-full w-72 overflow-x-hidden px-2 py-4"
 		>
 			<Sidebar />
 		</div>
