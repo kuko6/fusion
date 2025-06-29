@@ -1,30 +1,28 @@
+# fly.toml app configuration file generated for kuko-fusion-rss-wild-sunset-9331 on 2025-06-19T23:02:42+02:00
+#
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "{APP_NAME}"
-
-# https://fly.io/docs/reference/regions/#fly-io-regions
-primary_region = "{REGION}"
+app = 'kuko-fusion-rss'
+primary_region = 'fra'
 
 [build]
-image = 'ghcr.io/0x2e/fusion:latest'
+image = 'ghcr.io/kuko6/fusion:main'
+
+[env]
+DB = '/data/fusion.db'
+HOST = '0.0.0.0'
+
+[[mounts]]
+source = 'fusion_data'
+destination = '/data'
+initial_size = '1GB'
 
 [http_service]
 internal_port = 8080
 force_https = true
-auto_stop_machines = "off"
-auto_start_machines = false
+auto_stop_machines = 'suspend'
+auto_start_machines = true
 
 [[vm]]
 size = 'shared-cpu-1x'
-memory = '256mb'
-
-[env]
-PASSWORD = "{YOUR_PASSWORD}"
-HOST = "127.0.0.1"
-DB = "/data/fusion.db"
-
-[mounts]
-source = "fusion_data"
-destination = "/data"
-initial_size = "1GB"
