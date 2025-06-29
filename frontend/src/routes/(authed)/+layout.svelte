@@ -13,7 +13,7 @@
 
 <div class="drawer lg:drawer-open">
 	<input id="sidebar-toggle" type="checkbox" bind:checked={showSidebar} class="drawer-toggle" />
-	<div class="drawer-content bg-base-100 relative z-10 min-h-screen overflow-x-clip">
+	<div class="drawer-content bg-base-100 relative min-h-screen overflow-x-clip">
 		<div class="mx-auto flex h-full max-w-6xl flex-col pb-4">
 			<svelte:boundary>
 				{@render children()}
