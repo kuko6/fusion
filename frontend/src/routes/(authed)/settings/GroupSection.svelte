@@ -49,19 +49,19 @@
 
 <Section id="groups" title={t('common.groups')} description={t('settings.groups.description')}>
 	<div class="flex flex-col space-y-4">
-		{#each existingGroups as g}
-			<div class="flex flex-col items-center space-x-2 md:flex-row">
-				<input type="text" class="input w-full md:w-56" bind:value={g.name} />
-				<div class="flex gap-2">
-					<button onclick={() => handleUpdate(g.id)} class="btn btn-ghost">
-						{t('common.save')}
-					</button>
-					<button onclick={() => handleDelete(g.id)} class="btn btn-ghost text-error">
-						{t('common.delete')}
-					</button>
+		{#each existingGroups as g (g.id)}
+				<div class="flex flex-col items-center space-x-2 md:flex-row">
+					<input type="text" class="input w-full md:w-56" bind:value={g.name} />
+					<div class="flex gap-2">
+						<button onclick={() => handleUpdate(g.id)} class="btn btn-ghost">
+							{t('common.save')}
+						</button>
+						<button onclick={() => handleDelete(g.id)} class="btn btn-ghost text-error">
+							{t('common.delete')}
+						</button>
+					</div>
 				</div>
-			</div>
-		{/each}
+			{/each}
 		<div class="flex items-center space-x-2">
 			<input type="text" class="input w-full md:w-56" bind:value={newGroup} />
 			<button onclick={() => handleAddNew()} class="btn btn-ghost"> {t('common.add')} </button>

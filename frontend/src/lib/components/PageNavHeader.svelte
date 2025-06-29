@@ -12,7 +12,7 @@
 	let { title, children, showSearch }: Props = $props();
 </script>
 
-<header class="bg-base-100 border-neutral sticky top-0 z-50 border-b py-2">
+<header class="bg-base-100 border-neutral sticky top-0 z-50 py-2 {children ? 'border-b' : ''}">
 	<div class="flex flex-col justify-between px-1 md:px-4 lg:flex-row lg:items-center lg:px-8">
 		<div class="flex items-center justify-between gap-4">
 			<label for="sidebar-toggle" class="btn btn-ghost btn-square lg:hidden">
@@ -20,8 +20,6 @@
 			</label>
 			{#if showSearch}
 				<ActionSearch />
-			{:else if title}
-				<span class="text-base-content/60 text-sm">{title}</span>
 			{/if}
 		</div>
 		<div class="ml-auto">

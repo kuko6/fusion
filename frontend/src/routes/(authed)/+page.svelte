@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ItemActionMarkAllasRead from '$lib/components/ItemActionMarkAllasRead.svelte';
+	import FeedActionRefresh from '$lib/components/FeedActionRefresh.svelte';
 	import ItemList from '$lib/components/ItemList.svelte';
 	import PageNavHeader from '$lib/components/PageNavHeader.svelte';
 	import { t } from '$lib/i18n/index.js';
@@ -12,11 +13,12 @@
 </svelte:head>
 
 <div class="flex flex-col">
-	<PageNavHeader showSearch={true}>
+    <PageNavHeader showSearch={true}>
 		{#await data.items}
 			<ItemActionMarkAllasRead disabled />
 		{:then items}
 			<ItemActionMarkAllasRead items={items.items} />
+			<FeedActionRefresh />
 		{/await}
 	</PageNavHeader>
 	<div class="px-4 lg:px-8">
