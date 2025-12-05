@@ -77,6 +77,7 @@ const lang = {
 	'item.remove_from_bookmark': 'Aus Lesezeichen entfernen',
 	'item.goto_feed': 'Zum Feed gehen',
 	'item.visit_the_original': 'Originallink besuchen',
+	'item.share': 'Teilen',
 
 	// settings
 	'settings.appearance': 'Erscheinungsbild',

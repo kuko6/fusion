@@ -77,6 +77,7 @@ const lang = {
 	'item.remove_from_bookmark': 'Remove from bookmark',
 	'item.goto_feed': 'Go to feed',
 	'item.visit_the_original': 'Visit original link',
+	'item.share': 'Share',
 
 	// settings
 	'settings.appearance': 'Appearance',
